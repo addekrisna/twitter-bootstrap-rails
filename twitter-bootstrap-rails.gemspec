@@ -18,13 +18,12 @@ Gem::Specification.new do |s|
   s.executables   = `git ls-files -- bin/*`.split("\n").map{ |f| File.basename(f) }
   s.require_paths = ["lib"]
 
-  s.add_dependency             'railties',   '>= 3.1'
-  s.add_dependency             'actionpack', '>= 3.1'
+  s.add_dependency 'railties',   '>= 3.1'
+  s.add_dependency 'actionpack', '>= 3.1'
+  s.add_dependency 'execjs',     '>= 1.4.0'
 
   if (RUBY_PLATFORM == 'java')
     s.add_dependency  'therubyrhino', '~> 1.73.4'
-  else
-    s.add_dependency  'therubyracer', '>= 0.10.2'
   end
 
   s.add_runtime_dependency     'less-rails', '~> 2.2.3'
